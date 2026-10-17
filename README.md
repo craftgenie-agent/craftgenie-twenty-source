@@ -13,7 +13,7 @@ git tag -l 'sha-*'              # one tag per published image
 git checkout sha-<commit>       # SOURCE.md at the top says which Twenty version it is and how to build it
 ```
 
-Each tag is Twenty as published upstream at [twentyhq/twenty](https://github.com/twentyhq/twenty), plus CraftGenie's changes. Every file CraftGenie changed carries a `FORK:` marker (`git grep -n "FORK:"`). Left out of these trees are CraftGenie's CI workflows and internal development notes, which are not needed to build, run or modify the program.
+Each tag is Twenty as published upstream at [twentyhq/twenty](https://github.com/twentyhq/twenty), plus CraftGenie's changes. Every file CraftGenie changed carries a `FORK:` marker (`git grep -n "FORK:"`). Left out of these trees are all GitHub Actions workflows (`.github/workflows/`, upstream's and CraftGenie's: CI, not the program) and CraftGenie's internal development notes. None of them is needed to build, run or modify the program; the Dockerfile and build scripts are all there. This repository runs no Actions.
 
 ## License
 
